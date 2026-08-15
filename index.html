@@ -1,58 +1,14 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VELO | אביזרי אופניים</title>
-  <meta name="description" content="VELO – אביזרי אופניים שנבחרו לרכיבה טובה יותר." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--cream:#f5f1e9;--paper:#fffdf8;--ink:#20231f;--orange:#ee5a2a;--orange-deep:#cf431b;--sage:#a8b89b;--line:#dedacf;--sun:#f4b63b}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:Assistant,Arial,sans-serif}.topline{height:8px;background:var(--orange)}
-    .announcement{background:#24352b;color:#fff;text-align:center;font-size:14px;padding:8px 20px;letter-spacing:.15px}.announcement b{color:#f8ca64}
-    header{max-width:1280px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:23px 36px;border-bottom:1px solid var(--line)}
-    .logo{font-family:Rubik,sans-serif;font-weight:800;font-size:34px;letter-spacing:-2px;line-height:1;display:flex;align-items:center;gap:9px}.logo span{color:var(--orange)}.wheel{width:28px;height:28px;border:3px solid var(--ink);border-radius:50%;position:relative}.wheel:before,.wheel:after{content:"";position:absolute;top:50%;left:50%;background:var(--ink);transform:translate(-50%,-50%)}.wheel:before{width:3px;height:22px}.wheel:after{width:22px;height:3px}
-    nav{display:flex;gap:30px;font-size:17px;font-weight:600}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--orange)}.actions{display:flex;gap:12px;align-items:center}.icon-btn{border:0;background:transparent;font-size:22px;cursor:pointer;padding:7px}.cart{background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 18px;font:700 15px Assistant;cursor:pointer}.cart small{background:var(--orange);border-radius:50%;padding:1px 6px;margin-right:5px}
-    .hero{max-width:1280px;margin:auto;padding:26px 36px 46px;display:grid;grid-template-columns:1.08fr .92fr;gap:24px;direction:ltr}.hero-copy,.hero-image{direction:rtl}.hero-copy{background:var(--sun);min-height:510px;padding:74px 8% 50px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.hero-copy:after{content:"";position:absolute;width:310px;height:310px;border:33px solid rgba(255,253,248,.38);border-radius:50%;left:-135px;bottom:-170px}.eyebrow{font-family:Rubik;font-size:14px;font-weight:700;letter-spacing:1.2px;color:#6a4a0b}.hero h1{font:800 clamp(44px,5.3vw,76px)/.95 Rubik;margin:13px 0 20px;letter-spacing:-2.5px}.hero h1 em{font-style:normal;color:var(--orange-deep)}.hero p{font-size:20px;max-width:400px;line-height:1.45;margin:0 0 28px}.primary{display:inline-flex;align-items:center;justify-content:center;width:max-content;background:var(--ink);color:white;text-decoration:none;padding:13px 26px;border-radius:2px;font-size:17px;font-weight:700;transition:.2s}.primary:hover{background:var(--orange-deep);transform:translateY(-2px)}.hero-image{min-height:510px;background:linear-gradient(0deg,rgba(18,24,18,.12),rgba(18,24,18,.03)),url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative}.photo-label{position:absolute;bottom:19px;right:20px;color:#fff;font:700 13px Rubik;background:rgba(31,35,31,.77);padding:9px 12px}
-    main{max-width:1280px;margin:auto;padding:0 36px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:35px 0 18px}.section-head h2{font:800 31px Rubik;margin:0;letter-spacing:-1px}.section-head a{color:var(--orange-deep);font-weight:700;text-decoration:none}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{background:var(--paper);min-height:160px;padding:21px;position:relative;overflow:hidden;text-decoration:none;color:var(--ink);transition:.2s}.category:hover{transform:translateY(-4px);box-shadow:0 8px 18px #1c23121c}.category strong{font:700 22px Rubik;display:block}.category span{font-size:15px}.category .emoji{position:absolute;bottom:-17px;left:8px;font-size:87px;filter:grayscale(.1)}
-    .feature{margin:66px 0;display:grid;grid-template-columns:1fr 1fr;background:#304638;color:#fff;min-height:330px}.feature-image{background:url('https://images.unsplash.com/photo-1533561052604-c3beb6d55b8d?auto=format&fit=crop&w=1000&q=85') center/cover}.feature-copy{padding:54px 12%;display:flex;flex-direction:column;justify-content:center}.feature-copy h2{font:800 37px/1.05 Rubik;margin:8px 0 17px}.feature-copy p{font-size:18px;line-height:1.45;max-width:430px;margin:0 0 22px}.feature-copy .primary{background:var(--sun);color:var(--ink)}
-    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product{background:var(--paper);padding:13px;position:relative}.product-image{height:186px;background:#ece8de center/cover no-repeat}.tag{position:absolute;top:22px;right:22px;background:var(--orange);color:#fff;padding:4px 8px;font-size:12px;font-weight:700}.product h3{font:700 18px Rubik;margin:14px 0 3px}.product p{margin:0;color:#686962}.price{font:800 20px Rubik;margin-top:12px;display:flex;justify-content:space-between;align-items:center}.add{border:1px solid var(--ink);background:transparent;border-radius:50%;font-size:20px;width:31px;height:31px;line-height:24px;cursor:pointer}.add:hover{background:var(--ink);color:#fff}
-    .newsletter{margin:70px 0 0;background:#e4dfd4;padding:44px;text-align:center}.newsletter h2{font:800 29px Rubik;margin:0 0 8px}.newsletter p{font-size:17px;margin:0 0 18px}.newsletter form{display:flex;max-width:420px;margin:auto;gap:7px}.newsletter input{flex:1;border:1px solid #bdb8ab;background:#fffdf9;padding:12px;font:16px Assistant}.newsletter button{background:var(--orange);color:#fff;border:0;padding:0 20px;font:700 16px Assistant;cursor:pointer}
-    footer{max-width:1280px;margin:auto;padding:35px 36px 45px;display:flex;justify-content:space-between;gap:25px;align-items:center;font-size:15px}.footer-links{display:flex;gap:20px}.footer-links a{color:inherit;text-decoration:none}.toast{position:fixed;bottom:24px;left:24px;background:#203128;color:#fff;padding:13px 18px;border-radius:3px;transform:translateY(100px);opacity:0;transition:.3s;z-index:3}.toast.show{transform:translateY(0);opacity:1}
-    @media(max-width:760px){header{padding:17px 20px}nav{display:none}.logo{font-size:28px}.hero{grid-template-columns:1fr;padding:0 0 25px;gap:0}.hero-image{order:-1;min-height:310px}.hero-copy{min-height:370px;padding:42px 25px}.hero h1{font-size:47px}main{padding:0 18px}.categories,.products{grid-template-columns:repeat(2,1fr)}.category{min-height:135px}.category .emoji{font-size:65px}.feature{grid-template-columns:1fr;margin:42px 0}.feature-image{min-height:260px}.feature-copy{padding:36px 27px}.feature-copy h2{font-size:31px}.product-image{height:145px}.newsletter{margin-left:-18px;margin-right:-18px;padding:36px 20px}footer{padding:27px 20px;align-items:flex-start;flex-direction:column}.announcement{font-size:12px}.actions .icon-btn{display:none}}
-  </style>
-</head>
-<body>
-  <div class="topline"></div>
-  <div class="announcement">משלוח חינם מעל <b>₪250</b> · אוספים מהחנות תוך שעתיים</div>
-  <header>
-    <a class="logo" href="#top" aria-label="VELO"><i class="wheel"></i>VE<span>LO</span></a>
-    <nav><a href="#shop">חנות</a><a href="#collections">קטגוריות</a><a href="#story">הסיפור שלנו</a><a href="#club">מועדון רוכבים</a></nav>
-    <div class="actions"><button class="icon-btn" aria-label="חיפוש">⌕</button><button class="cart" onclick="showToast('הסל שלך עדיין מחכה להרפתקה 🚲')">סל <small id="count">0</small></button></div>
-  </header>
-  <section class="hero" id="top">
-    <div class="hero-copy"><div class="eyebrow">GEAR FOR THE GOOD RIDE</div><h1>הדרך הכי טובה<br>להתחיל <em>לרכוב.</em></h1><p>ציוד חכם, נוח ויפה שמוציא אותך מהבית ומחזיר אותך עם חיוך.</p><a class="primary" href="#shop">לכל האביזרים ←</a></div>
-    <div class="hero-image"><span class="photo-label">העיר היא מסלול ההמראה שלך.</span></div>
-  </section>
-  <main>
-    <section id="collections"><div class="section-head"><h2>מה מחפשים היום?</h2><a href="#shop">לכל הקטגוריות ←</a></div><div class="categories">
-      <a class="category" href="#shop"><strong>קסדות</strong><span>בטיחות שנראית טוב</span><div class="emoji">⛑️</div></a>
-      <a class="category" href="#shop"><strong>תאורה</strong><span>להיראות, בכל שעה</span><div class="emoji">💡</div></a>
-      <a class="category" href="#shop"><strong>תיקים</strong><span>כל מה שצריך איתך</span><div class="emoji">🎒</div></a>
-      <a class="category" href="#shop"><strong>טיפוח</strong><span>לשמור על האופניים</span><div class="emoji">🧰</div></a>
-    </div></section>
-    <section class="feature" id="story"><div class="feature-image"></div><div class="feature-copy"><div class="eyebrow" style="color:#f4b63b">THE VELO WAY</div><h2>פחות פקקים.<br>יותר חיים.</h2><p>אנחנו מאמינים שרכיבה טובה לא חייבת להיות מסובכת. בוחרים את הדברים הנכונים, עולים על האופניים, ויוצאים לדרך.</p><a class="primary" href="#club">להכיר אותנו</a></div></section>
-    <section id="shop"><div class="section-head"><h2>בחירות של רוכבים</h2><a href="#shop">לכל המוצרים ←</a></div><div class="products">
-      <article class="product"><div class="tag">חדש</div><div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=600&q=80')"></div><h3>קסדת Urban Flow</h3><p>קלילה, מאווררת, מוכנה לעיר</p><div class="price">₪289 <button class="add" aria-label="הוספה לסל" onclick="add()">+</button></div></article>
-      <article class="product"><div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=600&q=80;filter:hue-rotate(90deg)')"></div><h3>פנס קדמי Beam 400</h3><p>עוצמה קטנה עם נוכחות גדולה</p><div class="price">₪149 <button class="add" aria-label="הוספה לסל" onclick="add()">+</button></div></article>
-      <article class="product"><div class="tag">אהוב</div><div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80')"></div><h3>תיק Saddle Daytrip</h3><p>בדיוק בגודל של יום טוב</p><div class="price">₪199 <button class="add" aria-label="הוספה לסל" onclick="add()">+</button></div></article>
-      <article class="product"><div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80')"></div><h3>ערכת Ride Ready</h3><p>כלי דרך, מדבקות ותיקון מהיר</p><div class="price">₪119 <button class="add" aria-label="הוספה לסל" onclick="add()">+</button></div></article>
-    </div></section>
-    <section class="newsletter" id="club"><h2>רוכבים איתנו?</h2><p>מבצעים, מסלולים וטיפים קטנים שישפרו לך את הרכיבה.</p><form onsubmit="subscribe(event)"><input required type="email" placeholder="האימייל שלך"><button>מצטרפים</button></form></section>
-  </main>
-  <footer><div class="logo"><i class="wheel"></i>VE<span>LO</span></div><div class="footer-links"><a href="#">משלוחים והחזרות</a><a href="#">שירות לקוחות</a><a href="#">Instagram</a></div><span>© 2026 VELO</span></footer>
-  <div class="toast" id="toast"></div>
-  <script>let items=0;function showToast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}function add(){items++;document.getElementById('count').textContent=items;showToast('נוסף לסל. בחירה טובה!')}function subscribe(e){e.preventDefault();e.target.reset();showToast('ברוכים הבאים למועדון VELO!')}</script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ee5a2a" />
+    <meta name="description" content="VELO – אביזרי אופניים שנבחרו לרכיבה טובה יותר." />
+    <title>VELO | אביזרי אופניים</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
